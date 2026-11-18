@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proxmox T2 kernel</title>
+<meta name="description" content="Proxmox VE kernels with Apple T2 support, built from Proxmox's kernel source with the t2linux patches and served as an APT repository.">
+<link rel="icon" href="/kit/logos/pve-t2.svg">
+<link rel="preload" href="/kit/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/kit/fonts/chakra-petch-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/kit/0x23.css">
+<script src="/kit/0x23.js"></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="frame">
+    <header class="top">
+        <div class="top__inner">
+            <nav class="nav" aria-label="Sections">
+                <a class="nav__mark" href="./"><img class="tile" src="/kit/logos/pve-t2.svg" width="28" height="28" alt="">PROXMOX T2 KERNEL</a>
+                <div class="nav__links">
+                    <a href="#inside">What's in it</a>
+                    <a href="#built">How it's built</a>
+                    <a href="https://github.com/0x23me/ppe-pve-t2">Source ↗</a>
+                    <button class="nav__theme" type="button" aria-label="Switch between light and dark"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"></path></svg></button>
+                </div>
+            </nav>
+            <div class="status">
+                <span>Made with <em class="hl">curiosity</em></span>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+    <section class="hero">
+        <div class="hero__head">
+            <p class="eyebrow"><span class="eyebrow__bar"></span>Proxmox T2 kernel · APT repository</p>
+            <h1>Proxmox VE kernels for T2 Macs.</h1>
+            <p class="hero__lead">Built from Proxmox's kernel source with the t2linux patches, and served as an APT repository at apt.0x23.me.</p>
+            <div class="actions">
+                <a class="btn btn--accent" href="#install">Install →</a>
+                <a class="btn" href="https://github.com/0x23me/ppe-pve-t2/releases/latest">Releases ↗</a>
+            </div>
+            <p class="version">Version 7.0.14-30 · Proxmox VE 9 (Debian trixie), amd64</p>
+        </div>
+        <div class="projects" id="install">
+            <div class="feature feature--wide">
+                <div class="feature__text">
+                    <span class="feature__name">Install with APT</span>
+                    <div class="cmds">
+                        <div class="cmd"><code>wget -qO /usr/share/keyrings/ppe-pve-t2.asc https://apt.0x23.me/KEY.gpg</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                        <div class="cmd"><code>echo "deb [signed-by=/usr/share/keyrings/ppe-pve-t2.asc] https://apt.0x23.me trixie main" &gt; /etc/apt/sources.list.d/ppe-pve-t2.list</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                        <div class="cmd"><code>apt update &amp;&amp; apt install proxmox-kernel-t2-7.0 proxmox-headers-t2-7.0</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                        <p class="cmds__note">As root on the Proxmox host, then reboot. <code>uname -r</code> then ends in <code>-pve-t2</code>.</p>
+                    </div>
+                    <p>New T2 kernels arrive with a normal <code>apt upgrade</code>.</p>
+                </div>
+                <div class="well"><img class="icon" src="/kit/logos/pve-t2.svg" width="176" height="176" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"><span>+</span><span>+</span></div>
+
+    <section class="section" id="inside">
+        <div class="head">
+            <div class="head__text">
+                <span class="label">01 / What's in it</span>
+                <h2>Proxmox's kernel with the t2linux patches.</h2>
+            </div>
+        </div>
+        <div class="focus">
+            <div class="focus__card focus__card--dark">
+                <div class="focus__top"><span class="focus__label">01 · T2 HARDWARE</span></div>
+                <p>The t2linux patches add the drivers for the hardware behind the T2 chip: Touch Bar, BCE (Buffer Copy Engine), Bluetooth, and APFS.</p>
+            </div>
+            <div class="focus__card">
+                <div class="focus__top"><span class="focus__label">02 · NEXT TO PROXMOX'S OWN</span></div>
+                <p>The packages are named with <code>t2</code> (<code>proxmox-kernel-t2-7.0</code>), so they don't collide with Proxmox's own <code>proxmox-kernel-7.0</code>. Both can stay installed, no apt pinning needed.</p>
+            </div>
+            <div class="focus__card">
+                <div class="focus__top"><span class="focus__label">03 · SIGNED</span></div>
+                <p>The repository is signed. The key's fingerprint is <code class="hl">47BEEF6A0CC800F7EB4A19C4C4F60CABCD494490</code>.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"><span>+</span><span>+</span></div>
+
+    <section class="section split" id="built">
+        <div class="split__intro">
+            <span class="label">02 / How it's built</span>
+            <h2>Checked every day, built when something changed.</h2>
+            <div class="split__text">
+                <p>Every build is also a <a href="https://github.com/0x23me/ppe-pve-t2/releases">GitHub release</a> with the packages.</p>
+            </div>
+        </div>
+        <ul class="rows split__side">
+            <li><span class="rows__key">check</span><span class="rows__text">Looks for a new tag in Proxmox's <code>pve-kernel</code> repository and new <a href="https://github.com/t2linux/linux-t2-patches">t2linux patches</a>.</span></li>
+            <li><span class="rows__key">build</span><span class="rows__text">In a <code>debian:trixie</code> container: <code>pve-kernel</code> at that tag, the t2linux patches, and <code>T2.patch</code>, which adds the <code>-t2</code> suffix and turns on the T2 options.</span></li>
+            <li><span class="rows__key">publish</span><span class="rows__text">Adds the packages to the repository with aptly, signs it and uploads it to apt.0x23.me.</span></li>
+        </ul>
+    </section>
+    </main>
+
+    <footer class="foot">
+        <div class="foot__card">
+            <div class="foot__main">
+                <div class="foot__links">
+                    <span class="version">Version 7.0.14-30 · MIT</span>
+                    <a href="https://github.com/0x23me/ppe-pve-t2/releases">Releases ↗</a>
+                    <a href="https://github.com/0x23me/ppe-pve-t2/issues">Issues ↗</a>
+                    <a href="https://github.com/t2linux/linux-t2-patches">t2linux ↗</a>
+                </div>
+            </div>
+            <nav class="foot__family" aria-label="More from 0x23">
+                <span>MORE FROM 0X23</span>
+                <a href="/priel/"><img src="/kit/logos/priel.png" width="20" height="20" alt="">Priel</a>
+                <a href="/pbs-mackup/"><img src="/kit/logos/pbs-mackup.png" width="20" height="20" alt="">PBS Mackup</a>
+                <a href="/">All projects →</a>
+            </nav>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
