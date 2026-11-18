@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0x23</title>
+<meta name="description" content="Priel, PBS Mackup and the Proxmox T2 kernel: small open source tools for the Mac, Proxmox and OPNsense.">
+<link rel="icon" href="/kit/logos/0x23.png">
+<link rel="preload" href="/kit/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/kit/fonts/chakra-petch-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/kit/0x23.css">
+<script src="/kit/0x23.js"></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="frame">
+    <header class="top">
+        <div class="top__inner">
+            <nav class="nav" aria-label="Sections">
+                <a class="nav__mark" href="/"><img src="/kit/logos/0x23.png" width="28" height="28" alt="">0X23</a>
+                <div class="nav__links">
+                    <a href="#projects">Projects</a>
+                    <a href="#install">Install</a>
+                    <a href="https://github.com/0x23me">GitHub ↗</a>
+                    <button class="nav__theme" type="button" aria-label="Switch between light and dark"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"></path></svg></button>
+                </div>
+            </nav>
+            <div class="status">
+                <span>Made with <em class="hl">curiosity</em>.</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+    <section class="hero" id="projects">
+        <div class="hero__head">
+            <p class="eyebrow"><span class="eyebrow__bar"></span>0x23 · Open source</p>
+            <h1>On the side. <span class="dim">Experiments that became tools.</span></h1>
+            <p class="hero__lead">Small apps and packages for the Mac, Proxmox and OPNsense. Each one started as something I needed at home.</p>
+        </div>
+        <div class="apps">
+            <article class="app">
+                <div class="well"><img src="/kit/logos/priel.png" width="112" height="112" alt=""></div>
+                <div class="app__text">
+                    <div class="app__top"><a class="project__name card-link" href="/priel/">Priel</a><span class="project__tag">macOS · OPNsense</span></div>
+                    <p>A menu bar app for <a href="https://github.com/nning/juist">juist</a>, a peer-to-peer WireGuard mesh VPN, plus an OPNsense plugin for the firewall end.</p>
+                    <div class="app__links"><a href="/priel/">Page →</a><a href="https://github.com/0x23me/priel">Source ↗</a><span class="version">0.2.0</span></div>
+                </div>
+            </article>
+            <article class="app">
+                <div class="well"><img src="/kit/logos/pbs-mackup.png" width="112" height="112" alt=""></div>
+                <div class="app__text">
+                    <div class="app__top"><a class="project__name card-link" href="/pbs-mackup/">PBS Mackup</a><span class="project__tag">macOS</span></div>
+                    <p>A menu bar app that backs up a Mac to a Proxmox Backup Server in the background.</p>
+                    <div class="app__links"><a href="/pbs-mackup/">Page →</a><a href="https://github.com/0x23me/pbs-mackup">Source ↗</a><span class="version">0.6.0</span></div>
+                </div>
+            </article>
+            <article class="app">
+                <div class="well"><img src="/kit/logos/pve-t2.svg" width="112" height="112" alt=""></div>
+                <div class="app__text">
+                    <div class="app__top"><a class="project__name card-link" href="https://github.com/0x23me/ppe-pve-t2">Proxmox T2 kernel</a><span class="project__tag">Linux</span></div>
+                    <p>Proxmox VE kernels with Apple T2 support, built automatically and served as an APT repository.</p>
+                    <div class="app__links"><a href="https://github.com/0x23me/ppe-pve-t2">Source ↗</a></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"><span>+</span><span>+</span></div>
+
+    <section class="section split" id="install">
+        <div class="split__intro">
+            <span class="label">01 / Install</span>
+            <h2>One tap for the Mac apps. <span class="dim">One APT repository for the kernel.</span></h2>
+            <div class="split__text">
+                <p>The Mac apps are signed and notarized, and Homebrew keeps them up to date. The kernel comes from apt.0x23.me and updates with a normal <code>apt upgrade</code>.</p>
+            </div>
+        </div>
+        <div class="split__side">
+            <div class="cmds">
+                <span class="label">Mac apps</span>
+                <div class="cmd"><code>brew tap 0x23me/tap</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <div class="cmd"><code>brew trust --cask 0x23me/tap/priel</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <div class="cmd"><code>brew install --cask 0x23me/tap/priel</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <p class="cmds__note">The same two lines with <code>pbs-mackup</code> for PBS Mackup.</p>
+            </div>
+            <div class="cmds">
+                <span class="label">Proxmox T2 kernel</span>
+                <div class="cmd"><code>wget -qO /usr/share/keyrings/ppe-pve-t2.asc https://apt.0x23.me/KEY.gpg</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <div class="cmd"><code>echo "deb [signed-by=/usr/share/keyrings/ppe-pve-t2.asc] https://apt.0x23.me trixie main" &gt; /etc/apt/sources.list.d/ppe-pve-t2.list</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <div class="cmd"><code>apt update &amp;&amp; apt install proxmox-kernel-t2-7.0 proxmox-headers-t2-7.0</code><button class="cmd__copy" type="button" aria-label="Copy"><svg class="glyph" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+                <p class="cmds__note">As root on the Proxmox host, then reboot. Details in the <a href="https://github.com/0x23me/ppe-pve-t2#readme">README</a>.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="foot">
+        <div class="foot__card">
+            <div class="foot__main">
+                <div class="foot__say">
+                    <h2>Found a bug?</h2>
+                    <p><a href="https://github.com/0x23me/0x23me.github.io/issues">Open an issue</a> on this site's GitHub page.</p>
+                </div>
+                <div class="foot__links">
+                    <span class="version">Priel 0.2.0 · PBS Mackup 0.6.0</span>
+                    <a href="https://github.com/0x23me">GitHub ↗</a>
+                    <a href="https://felix.do">felix.do ↗</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
